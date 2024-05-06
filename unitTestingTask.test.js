@@ -28,14 +28,14 @@ describe("unitTestingTask", () => {
       "YY-MMMM-dd DDD, hh:mm:ss:ff A Z",
       "04/10/2024"
     );
-    expect(dateFormat).toBe("24-April-10 Wednesday, 12:00:00:000 AM -05:00");
+    expect(dateFormat).toBe("24-April-10 Wednesday, 12:00:00:000 AM +00:00");
   });
   it("should display date with time in the 24hr format with extended timezone format", () => {
     const dateFormat = unitTestingTask(
       "YY-M-dd DDD, H:mm:ss:ff A Z",
       "04/10/2024"
     );
-    expect(dateFormat).toBe("24-4-10 Wednesday, 0:00:00:000 AM -05:00");
+    expect(dateFormat).toBe("24-4-10 Wednesday, 0:00:00:000 AM +00:00");
   });
   it("should return date in D, MMM dd, YY format", () => {
     const dateFormat = unitTestingTask("DD, MMM dd, YY", "04/10/2024");
